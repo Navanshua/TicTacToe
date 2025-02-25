@@ -1,0 +1,57 @@
+h1{
+    font-size:8vh;
+}
+body{
+    background-color: rgb(108, 116, 111);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.board{
+    height:fit-content;
+    width:fit-content;
+    background-color:white;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding:1vh;
+    border-radius: 5%;
+}
+.checkbox{
+    border-radius:15%;
+    height:20vh;
+    width:20vh;
+    border:solid white 1vh;
+    background-color: rgb(164, 204, 83);
+    font-size:10vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(7, 80, 0);
+}
+#reset{
+    background-color: rgb(39, 39, 39);
+    color:white;
+    margin:5vh;
+    height:auto;
+    width:auto;
+    font-size:5vh;
+    padding:2vh;
+    border:solid black 0.1vh;
+    border-radius:10px;
+}
+#newGame{
+    background-color: rgb(39, 39, 39);
+    color:white;
+    margin:5vh;
+    height:auto;
+    width:auto;
+    font-size:5vh;
+    padding:2vh;
+    border:solid black 0.1vh;
+    border-radius:10px;
+}
+.hide{
+    display:none;
+}
