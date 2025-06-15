@@ -31,6 +31,7 @@ const disablebtns = () => {
     }
 }
 const checkWinner = () => {
+    let winnerFound = false;
     for(let pattern of winPatterns){
         console.log(check[pattern[0]],check[pattern[1]],check[pattern[2]]);
         let btn0 = check[pattern[0]].innerText;
@@ -40,16 +41,19 @@ const checkWinner = () => {
             head.innerText = "O wins";
             end.classList.remove("hide");
             disablebtns();
+            winnerFound = true;
         }
         else if((btn0 === 'X' ) && (btn1 === 'X') && (btn2 === 'X')){
             head.innerText = "X wins";
             end.classList.remove("hide");
             disablebtns();
+            winnerFound = true;
         }
-        else if(count == 9){
-            head.innerText = "Draw";
-            end.classList.remove("hide");
-        }
+    }
+    // Only check for draw after all win patterns have been checked
+    if (!winnerFound && count === 9) {
+        head.innerText = "Draw";
+        end.classList.remove("hide");
     }
 }
 check.forEach((checkbox) => {
